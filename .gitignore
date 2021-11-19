@@ -13,8 +13,6 @@ yarn.lock
 # testing
 /coverage
 
-# production
-/build
 
 # secret
 plop.js

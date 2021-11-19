@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.125c3186.chunk.css",
+    "main.js": "/static/js/main.686f5f79.chunk.js",
+    "main.js.map": "/static/js/main.686f5f79.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b4217496.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b4217496.js.map",
+    "static/js/2.0df9fbe8.chunk.js": "/static/js/2.0df9fbe8.chunk.js",
+    "static/js/2.0df9fbe8.chunk.js.map": "/static/js/2.0df9fbe8.chunk.js.map",
+    "static/js/3.ebc2359f.chunk.js": "/static/js/3.ebc2359f.chunk.js",
+    "static/js/3.ebc2359f.chunk.js.map": "/static/js/3.ebc2359f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.125c3186.chunk.css.map": "/static/css/main.125c3186.chunk.css.map",
+    "static/js/2.0df9fbe8.chunk.js.LICENSE.txt": "/static/js/2.0df9fbe8.chunk.js.LICENSE.txt",
+    "static/media/cadran.758c6c60.png": "/static/media/cadran.758c6c60.png",
+    "static/media/Home.css": "/static/media/clap.99071631.png",
+    "static/media/clock.e97eaf8c.ogg": "/static/media/clock.e97eaf8c.ogg",
+    "static/media/heures.31607720.png": "/static/media/heures.31607720.png",
+    "static/media/horloge.883edd63.svg": "/static/media/horloge.883edd63.svg",
+    "static/media/loader.d662f046.gif": "/static/media/loader.d662f046.gif",
+    "static/media/logo.5f799805.svg": "/static/media/logo.5f799805.svg",
+    "static/media/minutes.cde7d5f8.png": "/static/media/minutes.cde7d5f8.png",
+    "static/media/neon4.f6e39ead.png": "/static/media/neon4.f6e39ead.png",
+    "static/media/pendule.f3b3d7ef.png": "/static/media/pendule.f3b3d7ef.png",
+    "static/media/zap.25d5fc5b.ogg": "/static/media/zap.25d5fc5b.ogg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4217496.js",
+    "static/js/2.0df9fbe8.chunk.js",
+    "static/css/main.125c3186.chunk.css",
+    "static/js/main.686f5f79.chunk.js"
+  ]
+}
