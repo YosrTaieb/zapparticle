@@ -34,14 +34,14 @@ const Home = ({
                         placeholder={media === "movie" ? "Votre Film Préféré ?" : "Votre Série Préférée ?"}
                     />
                 </div>
+                <a href="https://imgur.com/uIWQxFI" target="_BLANK" rel="noreferrer">
+                    Click Here
+                </a>
                 <div className="resultsFavorite purpose">
                     {favorites ? (
                         favorites?.map((film) => (
                             <div key={film.id} className="film-container">
                                 <div className="film">
-                                    <a href="https://imgur.com/uIWQxFI" target="_BLANK" rel="noreferrer">
-                                        Click Here
-                                    </a>
                                     <Poster media={media} item={film} setMovieId={handleClick} setTvId={handleClick} />
                                 </div>
                                 <div className="button-container">
