@@ -1,0 +1,257 @@
+.Movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 2vh;
+}
+
+.movie {
+  background: var(--blanc);
+  min-height: 90vh;
+  height: auto;
+  width: 95vw;
+}
+
+.movie h1 {
+  color: var(--body);
+}
+
+.movie img {
+  max-width: 100%;
+}
+
+.movie .basics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--rouge);
+}
+
+.movie .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  color: var(--rouge);
+}
+
+.movie .movie-infos {
+  color: var(--rouge);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.movie .pitch {
+  color: var(--body);
+  margin-top: 5vh;
+  padding: 5vw;
+  text-align: justify;
+}
+
+.movie .movie-infos p {
+  color: var(--rouge);
+}
+
+.centered-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.watch {
+  border: 0;
+  border-radius: 0.25rem;
+  width: 65vw;
+  height: 5vh;
+  background: var(--rouge);
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 5vw;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+  .Movie {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie {
+    background: var(--blanc);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infos {
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+
+  .movie h1 {
+    color: var(--body);
+    font-size: 2vw;
+    line-height: 2vw;
+    text-align: center;
+    padding: 1vw;
+    width: 100%;
+  }
+
+  .basics {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+
+  .basics span {
+    color: var(--rouge);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .basics span svg {
+    margin-right: 0.5vw;
+  }
+
+  /* -webkit-mask-image: -webkit-gradient(
+    linear,
+    left,
+    right,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0))
+  ); */
+
+  .affiche {
+    max-width: 100%;
+    max-height: 100%;
+    width: 40%;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+
+  p {
+    color: var(--body);
+  }
+
+  .movie .pitch {
+    margin-top: 2vh;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-family: Roboto, serif;
+    padding: 2vw;
+  }
+
+  .watch {
+    border: 0;
+    border-radius: 0.25rem;
+    width: 15vw;
+    height: 5vh;
+    background: var(--rouge);
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+
+  .note {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+    width: 70%;
+  }
+
+  .note span {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: limelight, sans-serif;
+    font-size: 2rem;
+  }
+
+  .movie-infos {
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .realisateur {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .realisateur p {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.1vw;
+  }
+
+  .acteurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .acteurs p {
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.1vw;
+  }
+}

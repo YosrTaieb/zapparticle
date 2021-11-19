@@ -1,0 +1,86 @@
+.CheckBox {
+  position: relative;
+  z-index: 2;
+}
+
+.CheckBox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.CheckBox label {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  grid-template-areas: 'checkbox label';
+  gap: 0.7em;
+  cursor: pointer;
+}
+
+.CheckBox label::before,
+.CheckBox label::after {
+  content: '';
+  grid-area: checkbox;
+  display: block;
+  margin-top: 0.1em;
+  background: var(--blanc);
+}
+
+.CheckBox label::before {
+  width: 200%;
+  height: 2em;
+  border-radius: 1em;
+  border: 1px solid black;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.CheckBox label::after {
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: calc(2em - 2px);
+  height: calc(2em - 2px);
+  border-radius: 50%;
+  background-color: var(--rouge);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.CheckBox label svg {
+  font-size: 1.3rem;
+  grid-area: checkbox;
+  display: block;
+  margin-top: 0.3em;
+  margin-left: 0.3em;
+  fill: var(--body);
+}
+
+.CheckBox label svg:nth-child(2) {
+  margin-left: 1.8em;
+}
+
+.CheckBox input:checked + label::before {
+  background-color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.CheckBox input:checked + label::after {
+  background-color: white;
+  transform: translateX(2em);
+}
+
+.CheckBox input:checked + label svg {
+  fill: var(--blanc);
+}
+
+.CheckBox label span {
+  display: none;
+}
+
+@media screen and (min-width: 1367px) {
+  .CheckBox label span {
+    display: flex;
+    margin-top: -0.5vh;
+    margin-left: 2vw;
+    font-size: 1.5vw;
+    font-family: Roboto, sans-serif;
+  }
+}

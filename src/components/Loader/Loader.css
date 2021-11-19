@@ -1,0 +1,21 @@
+.Loader {
+  height: 80%;
+  max-width: 100%;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Loader img {
+  height: 80%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.chargement {
+  font-family: limelight, sans-serif;
+  color: var(--rouge);
+  font-size: 3vw;
+}

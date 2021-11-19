@@ -1,0 +1,160 @@
+.Genre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.genres {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95vw;
+  height: 65vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.genre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 80vw;
+  height: 65vw;
+  background: var(--metal);
+  color: var(--blanc);
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+
+.genre:not(:last-child) {
+  margin-right: 2vw;
+}
+
+.genre:active .genre-icon {
+  animation-name: Rotate;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+.genre:hover {
+  background: var(--rouge);
+}
+
+.genre:hover .genre-icon svg {
+  fill: var(--blanc);
+}
+
+.genre-icon svg {
+  font-size: 15vh;
+  fill: var(--popcorn);
+}
+
+.genre-name {
+  font-size: 7vw;
+  color: var(--blanc);
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.genres-films {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.genres-films .film {
+  width: 46.6vh;
+  height: 70vh;
+  margin-right: 2vw;
+}
+
+.genre-films-container {
+  width: 95vw;
+  min-height: 40vh;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.genre-films-container .Pagination {
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+.Genre .Media {
+  top: 2vh;
+  right: 2vh;
+  left: auto;
+  position: absolute;
+}
+
+@keyframes Rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .genre {
+    width: clamp(7rem, 12vw, 11rem);
+    height: clamp(7rem, 12vw, 11rem);
+    min-width: auto;
+  }
+
+  .genres-films {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+  }
+
+  .genres-films .film {
+    width: 15vw;
+    height: 22.5vw;
+    margin-right: 2vw;
+  }
+
+  .genre:not(:last-child) {
+    margin-right: 2vh;
+  }
+
+  .genre-name {
+    font-size: clamp(1rem, 0.7vw, 2rem);
+  }
+
+  .genre-icon svg {
+    font-size: 5vh;
+  }
+
+  .genres {
+    width: 80%;
+  }
+
+  .genre-films-container .Pagination {
+    margin-bottom: 5vh;
+    margin-top: 0;
+  }
+}

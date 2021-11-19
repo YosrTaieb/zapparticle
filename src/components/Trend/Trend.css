@@ -1,0 +1,47 @@
+.films-container {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 65vw;
+}
+
+.Trend .Pagination {
+  margin-top: 5vh;
+}
+
+.neon {
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.Trend .Media {
+  left: 48vw;
+  top: 12vh;
+  transform: translate(-50%, 0);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  margin-left: -6vw;
+  margin-top: 1vh;
+}
+
+@media screen and (min-width: 1367px) {
+  .Trend .Media {
+    left: auto;
+    right: 7vh;
+    top: 7vh;
+    transform: translate(-50%, 0);
+  }
+
+  .checkbox-container {
+    margin-top: 5vh;
+  }
+}

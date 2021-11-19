@@ -1,0 +1,112 @@
+.choice {
+  position: absolute;
+  top: 30.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 4vh;
+  width: 50vw;
+  font-size: 1.2rem;
+}
+
+.clap {
+  height: 30vh;
+  width: 70vw;
+  margin-bottom: 5vh;
+  background-image: url('../../assets/images/clap.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.film {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  width: 60vw;
+  height: 90vw;
+  margin-right: auto;
+  margin-bottom: 5vh;
+  position: relative;
+  border-radius: 5px;
+}
+
+.resultsFavorite {
+  display: flex;
+  min-height: 40vh;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.film-container button {
+  border: 0;
+  background: var(--rouge);
+  color: var(--blanc);
+  font-family: system-ui, sans-serif;
+  font-size: 4vh;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-bottom: 2vh;
+}
+
+.Home .purpose .film {
+  margin-bottom: 0.5vh;
+}
+
+.Home .button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.Home .button-container a {
+  width: calc(100% - 1vw);
+  opacity: 0.8;
+}
+
+.Home .Media {
+  top: 5vh;
+  right: 2vh;
+  left: auto;
+}
+
+@media screen and (min-width: 1367px) {
+  .clap {
+    margin-top: 5vh;
+    height: 30vh;
+    width: 25vw;
+  }
+
+  .film-container button {
+    font-size: 1.5vw;
+  }
+
+  .choice {
+    height: 2.5vh;
+    width: 7.5vw;
+    font-size: 1.2rem;
+  }
+
+  .resultsFavorite {
+    margin-top: 2rem;
+  }
+
+  .film {
+    width: 15vw;
+    height: 22.5vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+  }
+}

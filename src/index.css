@@ -1,0 +1,289 @@
+/* Polices */
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+1. RESET
+2. Blocks
+3. Inline
+4. ID
+5. Classes
+*/
+
+:root {
+  --body: #0f0f0f;
+  --rouge: #ed4c4c;
+  --rougeop: rgba(237, 76, 76, 0.2);
+  --rougealt: #fe3c3c;
+  --marron: #a71f17;
+  --blanc: #fffef4;
+  --lumiere: linear-gradient(rgba(156, 217, 244, 3), rgba(42, 61, 69, 3));
+  --metal: linear-gradient(0deg, rgba(0, 0, 0, 3), rgba(33, 33, 33, 3));
+  --popcorn: #ffd092;
+  --orange: #ffb049;
+}
+
+/* 1 RESET */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* 2 Block */
+
+html {
+  background-color: var(--body);
+}
+
+body {
+  background-color: var(--body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  min-height: 100%;
+}
+
+section {
+  min-height: calc(100vh - 10rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 3 inline */
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--blanc);
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 15vw;
+  width: 100%;
+  word-break: break-word;
+  color: var(--blanc);
+  font-family: 'Limelight', cursive;
+  margin-bottom: 2vh;
+  text-align: center;
+  padding: 2vh;
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--blanc);
+  font-family: 'Limelight', cursive;
+  text-align: center;
+}
+
+section h2 {
+  margin: 5rem;
+  margin-bottom: 3rem;
+}
+
+/* 4 ID */
+
+/* 5 Classes */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 99vw;
+}
+
+.mobile {
+  display: flex;
+}
+
+.not-mobile {
+  display: none;
+}
+
+.move-telecommande {
+  transform: translate(-20%, -50%) !important;
+  transition: transform 0.5s ease-out;
+}
+
+.move-arrow {
+  transform: translateX(-16rem) translate(-50%, -50%) rotate(90deg) !important;
+  transition: transform 0.5s ease-out;
+  cursor: e-resize !important;
+}
+
+.move-horloge {
+  transform: translateX(-2vw) translate(-50%, 0) !important;
+}
+
+.show {
+  color: var(--blanc);
+  font-size: 5rem;
+  position: fixed;
+  right: -2rem;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transition: transform 0.5s ease-out;
+  line-height: 0 !important;
+  cursor: w-resize;
+  z-index: 5;
+  margin-top: 35vh;
+  filter: drop-shadow(0 0 2px var(--body));
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1367px) {
+  .mobile {
+    display: none;
+  }
+
+  .not-mobile {
+    display: flex;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+}

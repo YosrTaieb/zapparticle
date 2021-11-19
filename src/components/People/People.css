@@ -1,0 +1,214 @@
+.People {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+
+.People h1 {
+  z-index: 2;
+}
+
+.etoile {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 50vh;
+  height: 50vh;
+  margin-top: 3.5rem;
+}
+
+.People input {
+  z-index: 2;
+  height: 10vh;
+  width: 65vw;
+  font-size: 5vw;
+  text-align: center;
+  position: relative;
+  border: none;
+  outline: none;
+  background: var(--rouge);
+  color: var(--blanc);
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.People input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+label,
+.name {
+  color: var(--blanc);
+}
+
+.peoples {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.people-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
+}
+
+.search-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infos-people {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container-infos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 2vw;
+  min-height: auto;
+  background: var(--blanc);
+}
+
+.info-profile {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.film-infos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5vw;
+  height: 11.25vw;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+}
+
+.infos-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 2vw;
+  position: relative;
+  overflow: auto;
+}
+
+.infos-text h2 {
+  color: var(--body);
+  font-size: 10vw;
+}
+
+.infos-films-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.imdb {
+  border: 0;
+  border-radius: 0.25rem;
+  width: 98%;
+  height: 4vh;
+  background: var(--rouge);
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 5vw;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 1vh 5vw;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  bottom: 2vh;
+  transform: translate(-50%, 0);
+  margin-top: 5vh;
+}
+
+@media screen and (min-width: 1367px) {
+  .people-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .imdb {
+    width: 70%;
+    height: 6vh;
+    font-size: 2vw;
+    padding: 1vh 5vw;
+    left: 50%;
+    bottom: 2vh;
+    transform: translate(-50%, 0);
+  }
+
+  .infos-text h2 {
+    color: var(--body);
+    font-size: 5vw;
+  }
+
+  .container-infos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background: var(--blanc);
+  }
+
+  .People input {
+    z-index: 2;
+    height: 6vh;
+    width: 28vw;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+    border: none;
+    outline: none;
+    background: var(--rouge);
+    color: var(--blanc);
+    margin-top: -17vh;
+    text-transform: uppercase;
+  }
+
+  .search-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

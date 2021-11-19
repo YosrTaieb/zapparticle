@@ -1,0 +1,14 @@
+.Etoile {
+  display: none;
+}
+
+@media screen and (min-width: 1367px) {
+  .Etoile {
+    position: absolute;
+    left: 25%;
+    top: 35vh;
+    width: 25vw;
+    transform: translate(-50%, -50%) scale(2);
+    display: flex;
+  }
+}

@@ -1,0 +1,169 @@
+@media screen and (min-width: 1367px) {
+  .Movie {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie {
+    background: var(--blanc);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: url('https://p0.pikist.com/photos/511/1/paper-texture-crinkle-folds-rough-old-grunge-surface-backdrop.jpg')
+      30;
+  }
+
+  .infos {
+    height: 100%;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+
+  .movie h1 {
+    color: var(--body);
+    font-size: 2vw;
+    line-height: 2vw;
+    text-align: center;
+    padding: 1vw;
+    width: 100%;
+  }
+
+  .basics {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+
+  .basics span {
+    color: var(--rouge);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .basics span svg {
+    margin-right: 0.5vw;
+  }
+
+  .affiche {
+    max-width: 100%;
+    height: 100%;
+    -webkit-mask-image: -webkit-gradient(
+      linear,
+      left,
+      right,
+      from(rgba(0, 0, 0, 1)),
+      to(rgba(0, 0, 0, 0))
+    );
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+
+  p {
+    color: var(--body);
+  }
+
+  .pitch {
+    margin-top: 2vh;
+    width: 90%;
+    opacity: 0.7;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    font-family: Roboto, serif;
+  }
+
+  .watch {
+    border: 0;
+    border-radius: 0.25rem;
+    width: 15vw;
+    height: 5vh;
+    background: var(--rouge);
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .note {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2vh;
+    width: 70%;
+  }
+
+  .note span {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: limelight, sans-serif;
+    font-size: 2rem;
+  }
+
+  .movie-infos {
+    height: auto;
+  }
+
+  .realisateur {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .realisateur p {
+    color: var(--rouge);
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.1vw;
+  }
+
+  .saisons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .saisons p {
+    font-weight: 400;
+    font-family: Roboto, serif;
+    font-size: 1.1vw;
+  }
+
+  .prod {
+    max-width: 100%;
+    height: 10vh;
+    object-fit: contain;
+  }
+
+  .company {
+    max-width: 100%;
+    height: 5vh;
+  }
+}

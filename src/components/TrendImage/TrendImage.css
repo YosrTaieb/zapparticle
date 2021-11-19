@@ -1,0 +1,5 @@
+.trend_pellicule {
+  max-width: 80%;
+  object-fit: contain;
+  transform: translate(0, 0);
+}

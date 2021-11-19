@@ -1,0 +1,307 @@
+.Year {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.Year h1 {
+  font-size: 14vw;
+  margin-top: 0;
+}
+
+.Year p {
+  color: var(--blanc);
+  padding: 2vh;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.Year-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.horloge {
+  display: none;
+  /* position: absolute;
+  transition: transform 0.5s ease-out;
+  transform: translate(-50%, 0);
+  height: 80vh;
+  width: 49.38vh;
+  display: flex; */
+}
+
+.horloge-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.horloge img {
+  max-width: 100%;
+  position: absolute;
+}
+
+.structure {
+  height: 100%;
+  right: 0;
+}
+
+.pointer {
+  height: 38%;
+  left: 50.5%;
+  top: 26.9%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  transition: all 2s ease-out;
+}
+
+.minutes {
+  height: 38%;
+  left: 50.5%;
+  top: 26.9%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes RotateM {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.pendule {
+  top: 57%;
+  height: 20%;
+  animation-duration: 3s;
+  animation-name: Pendule;
+  left: 50%;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: top center;
+}
+
+@keyframes Pendule {
+  from {
+    transform: translate(-50%, 0) rotate(-25deg);
+    filter: drop-shadow(30px 10px 10px rgba(0, 0, 0, 0.5));
+  }
+
+  to {
+    transform: translate(-50%, 0) rotate(25deg);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  }
+}
+
+select {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: var(--body);
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 65%;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--blanc);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
+  margin: auto;
+  text-align: center;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.films {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+}
+
+.films .date {
+  position: absolute;
+  text-align: center;
+  font-size: 5.5vw;
+  padding: 0.25vh 0.5vw;
+  background-color: var(--rouge);
+  color: var(--blanc);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 5px;
+}
+
+.films .Pagination {
+  margin-bottom: 3vh;
+}
+
+.display {
+  width: 100%;
+  text-align: center;
+  left: 50%;
+  top: -5vh;
+  transform: rotate(0) scale(1);
+  color: var(--blanc);
+  font-size: 10vw;
+  font-family: limelight, sans-serif;
+  transform-origin: center;
+}
+
+.display-anim {
+  animation-name: display;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes display {
+  from {
+    transform: rotate(0) scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate(1080deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.Year .Media {
+  position: absolute;
+  left: 48%;
+  transform: translate(-50%, 0);
+}
+
+@media screen and (min-width: 1367px) {
+  .Year {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .films .date {
+    font-size: 0.8vw;
+    padding: 0.25vh 0.5vw;
+  }
+
+  .Year h1 {
+    font-size: 7vw;
+    margin-top: auto;
+  }
+
+  .display {
+    width: 100%;
+    left: 50%;
+    top: -5vh;
+    font-size: 3vw;
+  }
+
+  .horloge-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 40%;
+    z-index: 1;
+  }
+
+  .horloge {
+    position: relative;
+    transition: transform 0.5s ease-out;
+    height: 80vh;
+    width: 49.38vh;
+    display: flex;
+  }
+
+  select {
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: var(--body);
+    line-height: 1.3;
+    padding: 0.6em 1.4em 0.5em 0.8em;
+    width: 50%;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 0.5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--blanc);
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+    margin: auto;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select:hover {
+    border-color: #888;
+  }
+
+  select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px var(--rouge);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+  }
+
+  select option {
+    font-weight: normal;
+  }
+
+  .films {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20vw;
+  }
+}

@@ -1,0 +1,89 @@
+.Media {
+  position: absolute;
+  left: 48vw;
+  top: 18vh;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.Media label svg {
+  font-size: 1.4rem;
+  grid-area: checkbox;
+  display: block;
+  margin-top: 0.3em;
+  margin-left: 0.1em;
+  fill: var(--body);
+}
+
+.Media label svg:nth-child(2) {
+  margin-left: 1.7em;
+}
+
+.Media input {
+  position: absolute;
+  opacity: 0;
+}
+
+.Media label {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  grid-template-areas: 'checkbox label';
+  gap: 0.7em;
+  cursor: pointer;
+}
+
+.Media label::before,
+.Media label::after {
+  content: '';
+  grid-area: checkbox;
+  display: block;
+  margin-top: 0.1em;
+  background: var(--blanc);
+}
+
+.Media label::before {
+  width: 200%;
+  height: 2em;
+  border-radius: 1em;
+  border: 1px solid black;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.Media label::after {
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: calc(2em - 2px);
+  height: calc(2em - 2px);
+  border-radius: 50%;
+  background-color: var(--rouge);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Media input:checked + label::before {
+  background-color: var(--rouge);
+  border-color: var(--rouge);
+}
+
+.Media input:checked + label::after {
+  background-color: white;
+  transform: translateX(2em);
+}
+
+.Media input:checked + label svg {
+  fill: var(--blanc);
+}
+
+.Media input:focus + label::before {
+  box-shadow: 0 0 0 0.25em var(--body);
+}
+
+@media screen and (min-width: 1367px) {
+  .Media {
+    position: fixed;
+    left: auto;
+    right: 3vw;
+    top: 3vw;
+    transform: translate(-50%, 0);
+  }
+}

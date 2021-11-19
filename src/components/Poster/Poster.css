@@ -1,0 +1,47 @@
+.Poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+}
+
+.Poster img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Poster .title {
+  text-align: center;
+  font-size: 5vw;
+  padding: 0.25vh 0.5vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--blanc);
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 1367px) {
+  .Poster .title {
+    font-size: 0.8vw;
+  }
+}

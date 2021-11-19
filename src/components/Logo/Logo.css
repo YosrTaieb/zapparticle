@@ -1,0 +1,15 @@
+#logo {
+  display: none;
+}
+
+@media screen and (min-width: 1367px) {
+  #logo {
+    position: fixed;
+    width: 5vw;
+    top: 2vw;
+    left: 2vw;
+    max-width: 100%;
+    z-index: 4;
+    display: flex;
+  }
+}
