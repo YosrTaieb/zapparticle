@@ -13,10 +13,6 @@ yarn.lock
 # testing
 /coverage
 
-
-# secret
-plop.js
-
 # misc
 .DS_Store
 .env.local
