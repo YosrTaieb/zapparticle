@@ -16,11 +16,8 @@ const Movie = (props) => {
 
     const popcorn = Math.round(movie.vote_average);
 
-    const searchMovie = `https://api.themoviedb.org/3/movie/${props.id}?api_key=${Key}&language=fr-FR`;
-    const getId = `https://api.themoviedb.org/3/movie/${movie?.id}/external_ids?api_key=${Key}`;
-    const omdbSearch = `http://www.omdbapi.com/?apikey=${omdbKey}&i=${id.imdb_id}`;
-
     useEffect(() => {
+        const searchMovie = `https://api.themoviedb.org/3/movie/${props.id}?api_key=${Key}&language=fr-FR`;
         if (props.id !== 0) {
             axios.get(searchMovie).then(({ data }) => {
                 setMovie(data);
@@ -29,6 +26,7 @@ const Movie = (props) => {
     }, [props.id]);
 
     useEffect(() => {
+        const getId = `https://api.themoviedb.org/3/movie/${movie?.id}/external_ids?api_key=${Key}`;
         if (movie.length !== 0) {
             axios.get(getId).then(({ data }) => {
                 setId(data);
@@ -37,6 +35,7 @@ const Movie = (props) => {
     }, [movie]);
 
     useEffect(() => {
+        const omdbSearch = `http://www.omdbapi.com/?apikey=${omdbKey}&i=${id.imdb_id}`;
         if (props.id !== 0) {
             axios.get(omdbSearch).then(({ data }) => {
                 setMovieOmdb(data);
