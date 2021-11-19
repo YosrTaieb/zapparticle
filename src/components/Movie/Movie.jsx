@@ -36,7 +36,7 @@ const Movie = (props) => {
 
     useEffect(() => {
         const omdbSearch = `http://www.omdbapi.com/?apikey=${omdbKey}&i=${id.imdb_id}`;
-        if (props.id !== 0) {
+        if (id !== 0) {
             axios.get(omdbSearch).then(({ data }) => {
                 setMovieOmdb(data);
             });
@@ -49,61 +49,65 @@ const Movie = (props) => {
     return (
         <div className="Movie">
             <div className="movie">
-                <>
-                    {movie.length !== 0 ? (
-                        <img
-                            className="affiche"
-                            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-                            alt={movie.title}
-                        />
-                    ) : (
-                        ""
-                    )}
-                    <div className="infos">
-                        <h1>{movie.title}</h1>
-                        <div className="basics">
-                            <span>
-                                <BsCalendar2Date />
-                                {movieOmdb.Year}
-                            </span>
-                            <span>
-                                <AiOutlineClockCircle />
-                                {movieOmdb.Runtime}
-                            </span>
-                            <span>
-                                <FaTheaterMasks />
-                                {movieOmdb.Genre}
-                            </span>
+                {movieOmdb.length === 0 ? (
+                    <Loader />
+                ) : (
+                    <>
+                        {movie.length !== 0 ? (
+                            <img
+                                className="affiche"
+                                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                                alt={movie.title}
+                            />
+                        ) : (
+                            ""
+                        )}
+                        <div className="infos">
+                            <h1>{movie.title}</h1>
+                            <div className="basics">
+                                <span>
+                                    <BsCalendar2Date />
+                                    {movieOmdb.Year}
+                                </span>
+                                <span>
+                                    <AiOutlineClockCircle />
+                                    {movieOmdb.Runtime}
+                                </span>
+                                <span>
+                                    <FaTheaterMasks />
+                                    {movieOmdb.Genre}
+                                </span>
+                            </div>
+                            <div className="note">
+                                <span>{movie.vote_average}/10</span>
+                                <PopCorn pop={popcorn} />
+                            </div>
+                            <div className="movie-infos">
+                                <span className="realisateur">
+                                    <GiDirectorChair />
+                                    {director?.map((director, index) => (
+                                        <p key={index}>{director}</p>
+                                    ))}
+                                </span>
+                                <span className="acteurs">
+                                    <FaGrinStars />
+                                    {actors?.map((actor, index) => (
+                                        <p key={index}>{actor}</p>
+                                    ))}
+                                </span>
+                            </div>
+                            <p className="pitch">{movie.overview}</p>
+                            <a
+                                target="_BLANK"
+                                href={`https://www.youtube.com/results?search_query=${movie.title}+Bande+Annonce`}
+                                rel="noreferrer"
+                                className="centered-button"
+                            >
+                                <button className="watch">Voir Bande Annonce</button>
+                            </a>
                         </div>
-                        <div className="note">
-                            <span>{movie.vote_average}/10</span>
-                            <PopCorn pop={popcorn} />
-                        </div>
-                        <div className="movie-infos">
-                            <span className="realisateur">
-                                <GiDirectorChair />
-                                {director?.map((director, index) => (
-                                    <p key={index}>{director}</p>
-                                ))}
-                            </span>
-                            <span className="acteurs">
-                                <FaGrinStars />
-                                {actors?.map((actor, index) => (
-                                    <p key={index}>{actor}</p>
-                                ))}
-                            </span>
-                        </div>
-                        <p className="pitch">{movie.overview}</p>
-                        <a
-                            target="_BLANK"
-                            href={`https://www.youtube.com/results?search_query=${movie.title}+Bande+Annonce`}
-                            rel="noreferrer"
-                            className="centered-button"
-                        >
-                            <button className="watch">Voir Bande Annonce</button>
-                        </a>
-                    </div>
-                </>
+                    </>
+                )}
             </div>
         </div>
     );
